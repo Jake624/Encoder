@@ -1,0 +1,19 @@
+alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+key = ['X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W']
+
+
+def encode(message):
+  encoded_message = ""
+  for c in message:
+    if c.upper() in alphabet:
+      index = alphabet.index(c.upper())
+      encoded_message += key[index]
+    else:
+      encoded_message += c
+  return encoded_message
+
+# Example usage
+message = input("Enter message to encode: ")
+encoded_message = encode(message)
+print(encoded_message)  # Output: Khoor, Zruog!
